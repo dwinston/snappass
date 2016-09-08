@@ -20,7 +20,8 @@ else:
     redis_host = os.environ.get('REDIS_HOST', 'localhost')
     redis_port = os.environ.get('REDIS_PORT', 6379)
     redis_db = os.environ.get('SNAPPASS_REDIS_DB', 0)
-    redis_client = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db)
+    redis_client = redis.StrictRedis(
+        host=redis_host, port=redis_port, db=redis_db)
 
 time_conversion = {
     'week': 604800,
