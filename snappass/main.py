@@ -14,6 +14,7 @@ app.secret_key = os.environ.get('SECRET_KEY', 'Secret Key')
 app.config.update(
     dict(STATIC_URL=os.environ.get('STATIC_URL', 'static')))
 
+# For Heroku
 if os.environ.get('REDIS_URL'):
     redis_client = redis.StrictRedis.from_url(os.environ.get('REDIS_URL'))
 else:
